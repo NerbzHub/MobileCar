@@ -91,7 +91,7 @@ public class MovementControls : MonoBehaviour
 
         for (int i = 0; i < 2; i++)
         {
-            tyres[i].localEulerAngles = new Vector3(tyres[i].localEulerAngles.x, wc[i].steerAngle - tyres[i].localEulerAngles.z, tyres[i].localScale.z);
+            tyres[i].localEulerAngles = new Vector3(tyres[i].localEulerAngles.x, wc[i].steerAngle - tyres[i].localEulerAngles.z, tyres[i].localEulerAngles.z);
         }
     }
 }
