@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 59759016}
   - component: {fileID: 59759018}
   - component: {fileID: 59759017}
+  - component: {fileID: 59759019}
   m_Layer: 0
   m_Name: FLWheel
   m_TagString: Untagged
@@ -186,6 +187,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 59759015}
   m_Mesh: {fileID: 4300004, guid: 0126dd714c5feb3498db26d4ae0e3136, type: 3}
+--- !u!114 &59759019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59759015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdb3496d46f12e4eac2b32c62707801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wc: {fileID: 1544378295}
 --- !u!1 &135517625
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +577,7 @@ GameObject:
   - component: {fileID: 958551424}
   - component: {fileID: 958551426}
   - component: {fileID: 958551425}
+  - component: {fileID: 958551427}
   m_Layer: 0
   m_Name: FRWheel
   m_TagString: Untagged
@@ -627,6 +641,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 958551423}
   m_Mesh: {fileID: 4300006, guid: 0126dd714c5feb3498db26d4ae0e3136, type: 3}
+--- !u!114 &958551427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 958551423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdb3496d46f12e4eac2b32c62707801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wc: {fileID: 1253027722}
 --- !u!1 &1048595419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,6 +1294,7 @@ GameObject:
   - component: {fileID: 1577998170}
   - component: {fileID: 1577998172}
   - component: {fileID: 1577998171}
+  - component: {fileID: 1577998173}
   m_Layer: 0
   m_Name: RLWheel
   m_TagString: Untagged
@@ -1331,6 +1358,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577998169}
   m_Mesh: {fileID: 4300002, guid: 0126dd714c5feb3498db26d4ae0e3136, type: 3}
+--- !u!114 &1577998173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577998169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdb3496d46f12e4eac2b32c62707801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wc: {fileID: 1859067773}
 --- !u!1 &1597211341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1588,7 @@ GameObject:
   - component: {fileID: 1874693679}
   - component: {fileID: 1874693681}
   - component: {fileID: 1874693680}
+  - component: {fileID: 1874693682}
   m_Layer: 0
   m_Name: RRWheel
   m_TagString: Untagged
@@ -1612,6 +1652,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1874693678}
   m_Mesh: {fileID: 4300000, guid: 0126dd714c5feb3498db26d4ae0e3136, type: 3}
+--- !u!114 &1874693682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1874693678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecdb3496d46f12e4eac2b32c62707801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wc: {fileID: 1597211343}
 --- !u!1 &1932450248
 GameObject:
   m_ObjectHideFlags: 0
