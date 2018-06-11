@@ -8,6 +8,7 @@ public class MovementControls : MonoBehaviour
     //Centre of mass
     public Vector3 vecCOM = new Vector3(0, 0, 0);
     public WheelCollider[] wc;
+    public Transform[] tyres;
     public int wcTorqueLength;
     public int wcDecelerationSpeedLength;
     public float m_Torque;
@@ -27,6 +28,7 @@ public class MovementControls : MonoBehaviour
     private void Update()
     {
         HandBrake();
+        RotatingRTyres();
     }
 
     private void FixedUpdate()
@@ -77,6 +79,19 @@ public class MovementControls : MonoBehaviour
             {
                 wc[i].brakeTorque = 0;
             }
+        }
+    }
+
+    private void RotatingRTyres()
+    {
+        for (int i = 0; i < wcTorqueLength; i++)
+        {
+            tyres[i].Rotate(wc[i].rpm / 60 * 360 * Time.deltaTime, 0.0f, 0.0f);
+        }
+
+        for (int i = 0; i < 2; i++)
+        {
+            tyres[i].localEulerAngles = new Vector3(tyres[i].localEulerAngles.x, wc[i].steerAngle - tyres[i].localEulerAngles.z, tyres[i].localScale.z);
         }
     }
 }
