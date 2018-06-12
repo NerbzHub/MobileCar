@@ -15,14 +15,17 @@ public class MovementControls : MonoBehaviour
     public float m_steer = 25f;
     public float m_Brake = 10000f;
     public float m_decelerationSpeed = 1000f;
+    public float m_OllieHeight;
     public bool BrakeAllowed;
 
+    private Vector3 startingCOM;
 
     // Use this for initialization
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.centerOfMass = vecCOM;
+        startingCOM = vecCOM;
     }
 
     private void Update()
@@ -40,6 +43,15 @@ public class MovementControls : MonoBehaviour
 
         wc[0].steerAngle = Input.GetAxis("Horizontal") * m_steer;
         wc[1].steerAngle = Input.GetAxis("Horizontal") * m_steer;
+
+        //if(Input.GetKeyDown(KeyCode.Alpha2))
+        //{
+        //    Unstuck();
+        //}
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            HackOllie();
+        }
 
         DecelerationSpeed();
 
@@ -93,5 +105,22 @@ public class MovementControls : MonoBehaviour
         {
             tyres[i].localEulerAngles = new Vector3(tyres[i].localEulerAngles.x, wc[i].steerAngle - tyres[i].localEulerAngles.z, tyres[i].localEulerAngles.z);
         }
+    }
+
+    private void ResetCOM()
+    {
+        vecCOM = startingCOM;
+    }
+
+    private void Unstuck()
+    {
+        Vector3 holder = vecCOM;
+        vecCOM = new Vector3(vecCOM.x, vecCOM.y, -0.9f);
+        Invoke("ResetCOM", 1.0f);
+    }
+
+    private void HackOllie()
+    {
+        rigidbody.AddForce(Vector3.up * m_OllieHeight, ForceMode.Impulse);
     }
 }
