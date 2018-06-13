@@ -16,6 +16,7 @@ public class MovementControls : MonoBehaviour
     public float m_Brake = 10000f;
     public float m_decelerationSpeed = 1000f;
     public float m_OllieHeight;
+    public bool m_Grounded;
     public bool BrakeAllowed;
 
     private Vector3 startingCOM;
@@ -123,4 +124,6 @@ public class MovementControls : MonoBehaviour
     {
         rigidbody.AddForce(Vector3.up * m_OllieHeight, ForceMode.Impulse);
     }
+
+    
 }
